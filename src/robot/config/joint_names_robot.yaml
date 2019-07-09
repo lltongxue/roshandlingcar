@@ -1,0 +1,1 @@
+controller_joint_names: ['rare_universal_wheel_to_base', 'leftwheel_to_base', 'rightwheel_to_base', 'front_universal_wheel_state_to_base', 'front_universal_wheel_to_base', 'rare_universal_wheel_state_to_base', 'rare_universal_wheel_to_base', ]

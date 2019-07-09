@@ -1,0 +1,7 @@
+<launch>
+	<include file="$(find mrobot_description)/launch/arbotix_mrobot_with_kinect.launch" /> 
+
+	<node name="control" pkg="mrobot_description" type="control" />   
+	<node name="ref_path" pkg="mrobot_description" type="control" />
+	<node name="show_point" pkg="mrobot_description" type="show_point" />
+</launch>

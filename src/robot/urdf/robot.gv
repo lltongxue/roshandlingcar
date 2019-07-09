@@ -1,0 +1,23 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"front_universal_wheel_state_Link" [label="front_universal_wheel_state_Link"];
+"front_universal_wheel_Link" [label="front_universal_wheel_Link"];
+"leftwheel_Link" [label="leftwheel_Link"];
+"rare_universal_wheel_state_Link" [label="rare_universal_wheel_state_Link"];
+"rare_universal_wheel_Link" [label="rare_universal_wheel_Link"];
+"rightwheel_Link" [label="rightwheel_Link"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "front_universal_wheel_state_to_base" [label="xyz: 0.065 -0.0205 0 \nrpy: 1.5708 0.12626 0"]
+"front_universal_wheel_state_to_base" -> "front_universal_wheel_state_Link"
+"front_universal_wheel_state_Link" -> "front_universal_wheel_to_base" [label="xyz: 0.0065 0.002 -0.0135 \nrpy: 3.14159 0.64708 3.14159"]
+"front_universal_wheel_to_base" -> "front_universal_wheel_Link"
+"base_link" -> "leftwheel_to_base" [label="xyz: 0 -0.018 -0.05 \nrpy: 1.5708 -0 -0.14261"]
+"leftwheel_to_base" -> "leftwheel_Link"
+"base_link" -> "rare_universal_wheel_state_to_base" [label="xyz: -0.065 -0.0205 0 \nrpy: 1.5708 -0.22763 -1.42453e-17"]
+"rare_universal_wheel_state_to_base" -> "rare_universal_wheel_state_Link"
+"rare_universal_wheel_state_Link" -> "rare_universal_wheel_to_base" [label="xyz: 0.0065 0.002 -0.0135 \nrpy: -3.14159 -0.56112 -3.14159"]
+"rare_universal_wheel_to_base" -> "rare_universal_wheel_Link"
+"base_link" -> "rightwheel_to_base" [label="xyz: 0 -0.018 -0.05 \nrpy: 1.5708 -0 -0.14261"]
+"rightwheel_to_base" -> "rightwheel_Link"
+}

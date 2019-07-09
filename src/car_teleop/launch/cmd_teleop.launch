@@ -1,0 +1,7 @@
+<launch>
+  <node name="cmd_teleop" pkg="car_teleop" type="cmd_teleop.py" output="screen">
+    <param name="v_linear" value="0.15" type="double"/>
+    <param name="v_angular" value="0.35" type="double"/>
+    <param name="acc" value="1" type="double"/>
+  </node>
+</launch>

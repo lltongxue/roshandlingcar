@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.0-0-g9aa0fdb  Build Version: 1.5.7004.21443
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="robot">
+  <link name="base_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.18866" />
+      <inertia
+        ixx="0.01"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.01"
+        iyz="0.0"
+        izz="0.5" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://robot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="Red">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://robot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <gazebo reference="base_link">
+      <material>Gazebo/Red</material>
+  </gazebo>
+
+  <!-- leftwheel_Link -->
+  <link name="leftwheel_Link">
+    <inertial>
+      <origin
+        xyz="0 0.09217 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.013351" />
+      <inertia
+        ixx="1.4054E-06"
+        ixy="-2.7525E-24"
+        ixz="-2.647E-23"
+        iyy="2.3499E-06"
+        iyz="4.2406E-23"
+        izz="1.4054E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.57079633 0 0" />
+      <geometry>
+        <mesh filename="package://robot/meshes/leftwheel_Link.STL" />
+      </geometry>
+      <material
+        name="Black">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.57079633 0 0" />
+      <geometry>
+        <mesh filename="package://robot/meshes/leftwheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <gazebo reference="leftwheel_Link">
+      <material>Gazebo/Black</material>
+  </gazebo>
+
+  <!-- leftwheel_to_base -->
+  <joint name="leftwheel_to_base" type="continuous">
+    <origin
+      xyz="0 -0.018 -0.05"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="leftwheel_Link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="1000"
+      velocity="100" />
+    <dynamics
+      damping="100000"
+      friction="0.6" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+
+  <!-- rightwheel_Link -->
+  <link name="rightwheel_Link">
+    <inertial>
+      <origin
+        xyz="0 0.0078296 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.013351" />
+      <inertia
+        ixx="1.4054E-06"
+        ixy="-4.2779E-23"
+        ixz="3.9705E-23"
+        iyy="2.3499E-06"
+        iyz="-3.473E-23"
+        izz="1.4054E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot/meshes/rightwheel_Link.STL" />
+      </geometry>
+      <material
+        name="Black">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot/meshes/rightwheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <gazebo reference="rightwheel_Link">
+      <material>Gazebo/Black</material>
+  </gazebo>
+
+  <!-- rightwheel_to_base -->
+  <joint name="rightwheel_to_base" type="continuous">
+    <origin
+      xyz="0 -0.018 -0.05"
+      rpy="1.5708 0 -0.14261" />
+    <parent
+      link="base_link" />
+    <child
+      link="rightwheel_Link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      effort="1000"
+      velocity="100" />
+    <dynamics
+      damping="100000"
+      friction="0.6" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+
+  <!-- front_universal_wheel_state_Link -->
+  <link name="front_universal_wheel_state_Link">
+    <inertial>
+      <origin
+        xyz="-0.00081567 0 0.007063"
+        rpy="0 0 0" />
+      <mass
+        value="0.00073874" />
+      <inertia
+        ixx="2.8693E-08"
+        ixy="1.4476E-24"
+        ixz="3.8787E-09"
+        iyy="2.3301E-08"
+        iyz="5.1699E-24"
+        izz="1.6188E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot/meshes/front_universal_wheel_state_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.85098 0.85098 0.85098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot/meshes/front_universal_wheel_state_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- front_universal_wheel_state_to_base -->
+  <joint name="front_universal_wheel_state_to_base" type="continuous">
+    <origin
+      xyz="0.065 -0.0205 0"
+      rpy="1.5708 0.12626 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_universal_wheel_state_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      effort="1000"
+      velocity="100" />
+    <dynamics
+      damping="100000"
+      friction="0.6" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+
+  <!-- front_universal_wheel_Link -->
+  <link name="front_universal_wheel_Link">
+    <inertial>
+      <origin
+        xyz="0 -0.002 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00059041" />
+      <inertia
+        ixx="7.8748E-09"
+        ixy="-1.1347E-24"
+        ixz="4.1359E-25"
+        iyy="1.4243E-08"
+        iyz="9.8306E-25"
+        izz="7.8748E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot/meshes/front_universal_wheel_Link.STL" />
+      </geometry>
+      <material
+        name="Black">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot/meshes/front_universal_wheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <gazebo reference="front_universal_wheel_Link">
+      <material>Gazebo/Black</material>
+  </gazebo>
+
+  <!-- front_universal_wheel_to_base -->
+  <joint name="front_universal_wheel_to_base"
+    type="continuous">
+    <origin
+      xyz="0.0065 0.002 -0.0135"
+      rpy="-3.1416 0.64708 -3.1416" />
+    <parent
+      link="front_universal_wheel_state_Link" />
+    <child
+      link="front_universal_wheel_Link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="1000"
+      velocity="100" />
+    <dynamics
+      damping="100000"
+      friction="0.6" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+
+  <!-- rare_universal_wheel_state_Link -->
+  <link name="rare_universal_wheel_state_Link">
+    <inertial>
+      <origin
+        xyz="0.00081567 -1.7347E-18 -0.007063"
+        rpy="0 0 0" />
+      <mass
+        value="0.00073874" />
+      <inertia
+        ixx="2.8693E-08"
+        ixy="2.8951E-24"
+        ixz="3.8787E-09"
+        iyy="2.3301E-08"
+        iyz="-7.2378E-25"
+        izz="1.6188E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot/meshes/rare_universal_wheel_state_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.85098 0.85098 0.85098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot/meshes/rare_universal_wheel_state_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- rare_universal_wheel_state_to_base -->
+  <joint name="rare_universal_wheel_state_to_base"
+    type="continuous">
+    <origin
+      xyz="-0.065 -0.0205 0"
+      rpy="1.5708 -0.22763 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rare_universal_wheel_state_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      effort="1000"
+      velocity="100" />
+    <dynamics
+      damping="100000"
+      friction="0.6" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+
+  <!-- rare_universal_wheel_Link -->
+  <link name="rare_universal_wheel_Link">
+    <inertial>
+      <origin
+        xyz="-6.9389E-18 -0.002 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00059041" />
+      <inertia
+        ixx="7.8748E-09"
+        ixy="2.4786E-25"
+        ixz="-8.2718E-25"
+        iyy="1.4243E-08"
+        iyz="-5.4483E-25"
+        izz="7.8748E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot/meshes/rare_universal_wheel_Link.STL" />
+      </geometry>
+      <material
+        name="Black">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot/meshes/rare_universal_wheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <gazebo reference="rare_universal_wheel_Link">
+      <material>Gazebo/Black</material>
+  </gazebo>
+
+  <!-- rare_universal_wheel_to_base -->
+  <joint name="rare_universal_wheel_to_base" type="continuous">
+    <origin xyz="0.0065 0.002 -0.0135" rpy="3.1416 -0.56112 3.1416" />
+    <parent
+      link="rare_universal_wheel_state_Link" />
+    <child
+      link="rare_universal_wheel_Link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="1000"
+      velocity="100" />
+    <dynamics
+      damping="100000"
+      friction="0.6" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+
+</robot>

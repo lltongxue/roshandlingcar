@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.0-0-g9aa0fdb  Build Version: 1.5.7004.21443
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="car_model_t2">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-6.9389E-18 2.6021E-18 0.014651"
+        rpy="0 0 0" />
+      <mass
+        value="0.18591" />
+      <inertia
+        ixx="0.00018214"
+        ixy="-4.4172E-20"
+        ixz="-2.1205E-20"
+        iyy="0.00035308"
+        iyz="-3.2717E-22"
+        izz="0.00047127" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model_t2/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.40784 0.39216 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model_t2/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_wheel">
+    <inertial>
+      <origin
+        xyz="0 -0.00032962 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.013351" />
+      <inertia
+        ixx="1.4054E-06"
+        ixy="3.7503E-23"
+        ixz="3.2659E-24"
+        iyy="2.3499E-06"
+        iyz="-3.6117E-23"
+        izz="1.4054E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model_t2/meshes/left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79608 0.82353 0.93725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model_t2/meshes/left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_to_left"
+    type="continuous">
+    <origin
+      xyz="0 0.0425 0.003"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_wheel" />
+    <axis
+      xyz="0 -1 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="right_wheel">
+    <inertial>
+      <origin
+        xyz="0 0.00033063 -2.7756E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.013453" />
+      <inertia
+        ixx="1.4184E-06"
+        ixy="-3.6768E-23"
+        ixz="-1.1022E-23"
+        iyy="2.3664E-06"
+        iyz="-3.8003E-23"
+        izz="1.4184E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model_t2/meshes/right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79608 0.82353 0.93725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model_t2/meshes/right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_to_right"
+    type="continuous">
+    <origin
+      xyz="0 -0.0425 0.003"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_wheel" />
+    <axis
+      xyz="0 -1 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="front_wheel">
+    <inertial>
+      <origin
+        xyz="0 8.6736E-19 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00059041" />
+      <inertia
+        ixx="7.8748E-09"
+        ixy="2.9696E-24"
+        ixz="-2.1139E-26"
+        iyy="1.4243E-08"
+        iyz="-2.6839E-25"
+        izz="7.8748E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model_t2/meshes/front_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.41176 0.41176 0.41176 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model_t2/meshes/front_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_to_front"
+    type="continuous">
+    <origin
+      xyz="0.0585 0 -0.008"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_wheel" />
+    <axis
+      xyz="0 -1 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="back_wheel">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00059041" />
+      <inertia
+        ixx="7.8748E-09"
+        ixy="-1.0069E-24"
+        ixz="-3.543E-24"
+        iyy="1.4243E-08"
+        iyz="1.3457E-25"
+        izz="7.8748E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model_t2/meshes/back_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.41176 0.41176 0.41176 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model_t2/meshes/back_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_to_back"
+    type="continuous">
+    <origin
+      xyz="-0.0715 0 -0.008"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_wheel" />
+    <axis
+      xyz="0 -1 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+</robot>

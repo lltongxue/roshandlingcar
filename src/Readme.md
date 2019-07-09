@@ -1,0 +1,9 @@
+- `car_description` 书中的车，gazebo能显示出来
+- `car_gazebo`书中的车跟`car_description`包中显示的一样，在rviz中显示的
+- `car_teleop`键盘控制
+- `robot`solidworks导出的车，tf混乱
+- `car_model_t1`进行tf调整后的solidworks图
+- `car_model_t2`对t1进行修改，将base_link的坐标系修改
+- `car_model_t3/car_model_t4`对t2进行修改，将base_link的坐标系修改
+- `car_model_t4` 目前模型和tf是正确的。启动无异常
+- `vehicle_urdf_model`  甘 履带车模型
