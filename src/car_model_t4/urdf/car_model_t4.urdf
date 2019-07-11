@@ -13,12 +13,12 @@
       <mass
         value="0.18739" />
       <inertia
-        ixx="0.00018258"
-        ixy="-4.2641E-20"
-        ixz="-2.7143E-08"
-        iyy="0.00035976"
-        iyz="1.3591E-22"
-        izz="0.00047754" />
+        ixx="0.01"
+        ixy="0"
+        ixz="0"
+        iyy="0.01"
+        iyz="0"
+        izz="0.5" />
     </inertial>
     <visual>
       <origin
@@ -53,12 +53,12 @@
       <mass
         value="0.013351" />
       <inertia
-        ixx="1.4054E-06"
-        ixy="3.7502E-23"
-        ixz="3.2627E-24"
-        iyy="2.3499E-06"
-        iyz="-3.6116E-23"
-        izz="1.4054E-06" />
+        ixx="0.001"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.001"
+        iyz="0.0"
+        izz="0.001" />
     </inertial>
     <visual>
       <origin
@@ -104,17 +104,17 @@
     name="right_wheel">
     <inertial>
       <origin
-        xyz="0 0.00033063 -2.7756E-17"
+        xyz="0 0.00032962 0"
         rpy="0 0 0" />
       <mass
-        value="0.013453" />
+        value="0.013351" />
       <inertia
-        ixx="1.4184E-06"
-        ixy="-3.676E-23"
-        ixz="-1.1014E-23"
-        iyy="2.3664E-06"
-        iyz="-3.8005E-23"
-        izz="1.4184E-06" />
+        ixx="0.001"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.001"
+        iyz="0.0"
+        izz="0.001" />
     </inertial>
     <visual>
       <origin
@@ -159,17 +159,17 @@
     name="front_wheel">
     <inertial>
       <origin
-        xyz="0 8.6736E-19 0"
+        xyz="0 0 0"
         rpy="0 0 0" />
       <mass
         value="0.00059041" />
       <inertia
-        ixx="7.8748E-09"
-        ixy="2.9696E-24"
-        ixz="-2.1139E-26"
-        iyy="1.4243E-08"
-        iyz="-2.6839E-25"
-        izz="7.8748E-09" />
+        ixx="0.0001"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.0"
+        iyz="0.0001"
+        izz="0.0001" />
     </inertial>
     <visual>
       <origin
@@ -219,12 +219,12 @@
       <mass
         value="0.00059041" />
       <inertia
-        ixx="7.8748E-09"
-        ixy="-1.0069E-24"
-        ixz="-3.543E-24"
-        iyy="1.4243E-08"
-        iyz="1.3457E-25"
-        izz="7.8748E-09" />
+        ixx="0.0001"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.0001"
+        iyz="0.0"
+        izz="0.0001" />
     </inertial>
     <visual>
       <origin
@@ -291,7 +291,7 @@
       </plugin>
   </gazebo> 
 
-  <gazebo reference="left_wheel">
+  <!-- <gazebo reference="left_wheel">
     <mu>0.8</mu>
     <mu2>0.8</mu2>
     <kp>100000000.0</kp>
@@ -301,8 +301,9 @@
     <mu>0.8</mu>
     <mu2>0.8</mu2>
     <kp>100000000.0</kp>
-    <kd>10000.0</kd>    
-  </gazebo>
+    <kd>10000.0</kd>     -->
+  <!-- </gazebo> -->
+
     <gazebo reference="front_wheel">
     <mu>0.1</mu>
     <mu2>0.1</mu2>
@@ -315,4 +316,5 @@
     <kp>100000000.0</kp>
     <kd>10000.0</kd>    
   </gazebo>
+
 </robot>
